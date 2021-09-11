@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    int arr[100];
+    int sum[100];
+    int i, j, size, temp;
+
+    cout << "Enter Size : ";
+    cin>>s;
+
+    cout << "Enter elements : ";
+    for (i = 0; i < size; i++) {
+        cin >> arr[i];
+    }
+    
+    cout << "\nBefore : ";
+    for(i = 0; i < size; i++){
+       cout << arr[i] << " ";
+       sum[i] = arr[i];
+    }
+
+    j = s - 1;
+    for (i = 0; i < j; i++) {
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        j--;
+    }
+
+    cout << "\nReverse : ";
+    for (i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    
+    cout << "\nSum : ";
+    for(i = 0; i < size; i++){
+        int add = sum[i] + sum[i];
+        cout << add << " ";
+    }
+    cout << endl;
+    
+    return 0;
+}
